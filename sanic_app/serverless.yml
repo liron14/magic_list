@@ -1,0 +1,7 @@
+service: new-service
+provider: aws
+
+functions:
+  refine_items:
+    name: refine_items
+    handler: sanic_app.main.refine_items
