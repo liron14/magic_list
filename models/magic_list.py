@@ -12,6 +12,6 @@ class MagicList(list):
             obj: cls_type = cls_type()
             self[0] = obj
 
-    def __setitem__(self, index: int, value):
+    def __setitem__(self, index: int, value: object):
         self.extend([None])
         super().__setitem__(index, value)
