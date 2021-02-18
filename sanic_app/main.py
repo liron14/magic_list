@@ -2,8 +2,21 @@ import json
 
 from sanic import Sanic
 from sanic import response
+import jwt
+
+from sanic_app.users import USERS
 
 app = Sanic('lirons_server')
+
+
+@app.route("/login", methods=["GET"])
+def login(request):
+    # user: dict = json.loads(str(request.body, encoding='UTF-8'))['user']
+    # name: str = user['name']
+    # password: str = user['password']
+    # input_jwt: str = 'ttt'
+    #
+    return response.text('You are in!')
 
 
 @app.route("/api", methods=["POST"])
