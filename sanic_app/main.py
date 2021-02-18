@@ -19,7 +19,7 @@ def login(request):
     return response.text('You are in!')
 
 
-@app.route("/api", methods=["POST"])
+@app.route("/items_refine", methods=["POST"])
 def refine_items(request):
     return response.json({item['name']: [item[key] for key in item.keys() if 'val' in key.lower()][0]
                           for item in json.loads(str(request.body, encoding='UTF-8'))['items']})
